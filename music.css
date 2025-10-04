@@ -18,6 +18,7 @@ body{
     .brand{display:flex; gap:14px; align-items:center}
     .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06b6d4); display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:18px;box-shadow:0 8px 30px rgba(76,29,149,0.25)}
     h1{margin:0;font-size:18px}
+    
     .tag{color:var(--muted); font-size:13px}
 
     nav{display:flex; gap:12px}
