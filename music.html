@@ -11,44 +11,7 @@
 
 
   <style>
-    /* Gallery */
-    .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:18px}
-    .gallery img{width:100%; height:100px; object-fit:cover; border-radius:8px; cursor:pointer}
-
-    /* Booking */
-    .booking{display:flex; flex-direction:column; gap:8px}
-    label{font-size:13px; color:var(--muted)}
-    input,select,textarea{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
-
-    footer{margin-top:28px; display:flex; justify-content:space-between; align-items:center; color:var(--muted); font-size:13px}
-
-    /* responsive */
-    @media (max-width:980px){
-      .hero{grid-template-columns:1fr}
-      .studio-card .studio-image{height:180px}
-      .services-grid{grid-template-columns:repeat(2,1fr)}
-      .gallery{grid-template-columns:repeat(3,1fr)}
-    }
-    @media (max-width:640px){
-      body{padding:18px}
-      header{flex-direction:column; align-items:flex-start; gap:10px}
-      .services-grid{grid-template-columns:1fr}
-      .gallery{grid-template-columns:repeat(2,1fr)}
-    }
-
-    /* subtle animations */
-    .fade-in{opacity:0; transform:translateY(8px); animation:fadeIn 600ms forwards}
-    @keyframes fadeIn{to{opacity:1; transform:none}}
-
-    .audio-player{display:flex; gap:12px; align-items:center}
-    .play-btn{width:46px;height:46px;border-radius:10px;background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;cursor:pointer}
-    .meter{height:6px;border-radius:6px;background:linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); width:100px}
-
-    /* lightbox overlay */
-    
-    .lightbox{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(6,6,11,0.7); z-index:50}
-    .lightbox img{max-width:90%; max-height:80%; border-radius:10px}
-    .close-light{position:absolute; top:18px; right:18px; color:white; background:rgba(255,255,255,0.06); padding:8px; border-radius:8px; cursor:pointer}
+   
   </style>
 </head>
 <body> 
