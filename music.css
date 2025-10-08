@@ -23,7 +23,7 @@ body{
 
     nav{display:flex; gap:12px}
     nav a{color:var(--muted); text-decoration:none; padding:8px 12px; border-radius:10px}
-    nav a:hover{background:var(--glass); color:#fff}
+    nav a:hover{background:var(--glass); color:#ffffff}
 
     .hero{display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:stretch}
 
