@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
    /* The all Layout #ROOT */
    :root{
 
@@ -5,7 +7,15 @@
     /*  --bg:#0f1724;  --accent:#887402; --muted:#ffffff; --glass: rgba(255,255,255,0.04); */
 
       --radius:20px; --max-width:1250px; --accent:#ffd900;}
-    *{box-sizing:border-box}
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'poppins';
+
+    }
     html,body{height:100%;}
 
        /* BODY */
@@ -30,7 +40,7 @@ body{
     .hero{display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:stretch}
 
      /* Left column */
-    .card{background:linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:24px; box-shadow:0 6px 30px rgba(2,6,23,0.6);}
+    .card{background:linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.01)); border-radius:var(--radius); padding:24px; box-shadow:0 6px 30px rgba(248, 210, 0, 0.6);}
     .intro h2{margin:0 0 8px 0; font-size:28px}
     .intro p{margin:0 0 18px 0; color:var(--muted)}
 
@@ -39,13 +49,36 @@ body{
     .feature h4{margin:0 0 6px 0}
     .feature p{margin:0; color:var(--muted); font-size:13px}
 
-    .cta-row{display:flex; gap:12px}
+
+    .button{
+      gap: 50px;
+      display: flex;
+      width: 100%;
+      background-color: #2b2b2b;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    a{
+      position: relative;
+      background-color: rgb(255, 255, 255);
+      font-size: 22px;
+      font-weight: 500;
+      padding: white;
+      border-radius: 4px;
+      letter-spacing: 20.5px;
+      text-transform: uppercase;
+      transition: 0.3;
+    }
+
+    
+    /*.button{display:flex; gap:50px}
     .btn{background:var(--accent); border:none; padding:12px 16px; color:rgb(0, 0, 0); border-radius:10px; cursor:pointer; font-weight:600}
-    .btn.ghost{background:transparent; border:1px solid rgba(255,255,255,0.06)}
+    .btn.ghost{background:transparent; border:1px solid rgb(229, 255, 0)}
 
     /* Right column */
     .studio-card{display:flex; flex-direction:column; gap:12px}
-    .studio-card .studio-image{height:220px; border-radius:12px; background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s='); background-size:cover; background-position:center}
+    .studio-card .studio-image{height:220px; border-radius:12px; background-image: url('studio1.jpg'); background-size:cover; background-position:center}
     .specs{display:flex; gap:8px; flex-wrap:wrap}
     .spec{background:rgba(0, 0, 0, 0.02); padding:8px 10px; border-radius:8px; font-size:13px}
 
