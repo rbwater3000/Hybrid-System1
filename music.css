@@ -126,14 +126,13 @@
       background-color: #ff1867;
       box-shadow: 0 0 35px #ff1867; } 
     }
-
     /*.button{display:flex; gap:50px}
     .btn{background:var(--accent); border:none; padding:12px 16px; color:rgb(0, 0, 0); border-radius:10px; cursor:pointer; font-weight:600}
     .btn.ghost{background:transparent; border:1px solid rgb(229, 255, 0)}
 
     /* Right column */
     .studio-card{display:flex; flex-direction:column; gap:12px}
-    .studio-card .studio-image{height:220px; border-radius:12px; background-image: url('studio1.jpg'); background-size:cover; background-position:center}
+    .studio-card .studio-image{height:220px; border-radius:12px; background-image: url('Studio/studio1.jpg'); background-size:cover; background-position:center}
     .specs{display:flex; gap:8px; flex-wrap:wrap}
     .spec{background:rgba(0, 0, 0, 0.02); padding:8px 10px; border-radius:8px; font-size:13px}
 
