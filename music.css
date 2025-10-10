@@ -6,7 +6,7 @@
     /* color */
     /*  --bg:#0f1724;  --accent:#887402; --muted:#ffffff; --glass: rgba(255,255,255,0.04); */
 
-      --radius:20px; --max-width:1250px; --accent:#ffd900;}
+      --radius:20px; --max-width:1550px; --accent:#ffd900;}
 
     *{
         padding: 0;
@@ -14,12 +14,12 @@
         box-sizing: border-box;
         text-decoration: none;
         font-family: 'poppins';
-
     }
+
     html,body{height:100%;}
 
        /* BODY */
-body{
+    body{
       margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial; background:linear-gradient(180deg,#2b2b2b 0%,#2b2b2b 60%); color:#ffffff;
       -moz-osx-font-smoothing:grayscale; padding:32px; display:flex; justify-content:center; align-items:flex-start;
     }
@@ -40,7 +40,7 @@ body{
     .hero{display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:stretch}
 
      /* Left column */
-    .card{background:linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.01)); border-radius:var(--radius); padding:24px; box-shadow:0 6px 30px rgba(248, 210, 0, 0.6);}
+    .card{background:linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.01)); border-radius:var(--radius); padding:24px; box-shadow:0 6px 15px rgba(117, 56, 152, 0.6);}
     .intro h2{margin:0 0 8px 0; font-size:28px}
     .intro p{margin:0 0 18px 0; color:var(--muted)}
 
@@ -49,29 +49,84 @@ body{
     .feature h4{margin:0 0 6px 0}
     .feature p{margin:0; color:var(--muted); font-size:13px}
 
+/* The button --------------------------------------------------- */
 
     .button{
-      gap: 50px;
+      height: 8vh;
       display: flex;
-      width: 100%;
       background-color: #2b2b2b;
       justify-content: center;
       align-items: center;
-    }
+      gap: 20px;
     
     a{
       position: relative;
       background-color: rgb(255, 255, 255);
-      font-size: 22px;
+      font-size: 25px;
       font-weight: 500;
-      padding: white;
+      padding: 15px 35px; color: rgb(255, 255, 255);
       border-radius: 4px;
       letter-spacing: 20.5px;
       text-transform: uppercase;
-      transition: 0.3;
+      transition: 0.3s; }
+
+    a::before {
+     content: '';
+     position: absolute;
+     inset: 2px;
+     background: #27282c; }
+  
+    a span{
+      position: relative;
+      z-index: 1; }
+    a i{
+      position: absolute;
+      inset: 0;
+      display: block; }
+
+    a i::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 80%;
+      width: 15px;
+      height: 4px;
+      background-color: #2b2b2b;
+      transform: translateX(-50%) skewX(325deg);
+      transition: 1s; }
+
+    a i::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 80%;
+      width: 15px;
+      height: 4px;
+      background-color: #2b2b2b;
+      transform: translateX(-50%) scaleX(325deg);
+      transition: 1s; }
+
+    a:hover i::before{
+      width: 20px;
+      left: 20%; }
+
+    a:hover i::after{
+      width: 20px;
+      right: 20%; }
+
+    a:nth-child(1):hover{
+      background-color: #1e9bff;
+      box-shadow: 0 0 35px #1e9bff; }
+
+    a:nth-child(2):hover{
+      background-color: #6eff3e;
+      box-shadow: 0 0 35px #6eff3e; }
+
+    a:nth-child(3):hover{
+      background-color: #ff1867;
+      box-shadow: 0 0 35px #ff1867; } 
     }
 
-    
     /*.button{display:flex; gap:50px}
     .btn{background:var(--accent); border:none; padding:12px 16px; color:rgb(0, 0, 0); border-radius:10px; cursor:pointer; font-weight:600}
     .btn.ghost{background:transparent; border:1px solid rgb(229, 255, 0)}
@@ -97,7 +152,7 @@ body{
     label{font-size:13px; color:var(--muted)}
     input,select,textarea{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
 
-    footer{margin-top:28px; display:flex; justify-content:space-between; align-items:center; color:var(--muted); font-size:13px}
+    footer{margin-top:28px; display:flex; justify-content:space-around; align-items:center; color:var(--muted); font-size:18px}
     
  /* responsive */
     @media (max-width:980px){
