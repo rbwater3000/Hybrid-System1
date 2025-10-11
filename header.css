@@ -78,6 +78,8 @@ body {
 }
 
 .dropdown-menu { 
+    width: auto;
+    height: auto;
     display: none;
     position: absolute;
     background: #2b2b2b;
@@ -96,11 +98,12 @@ body {
 }
 
 .dropdown-menu li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: block;
-  transition: background 0.3s;
+    color: white;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s;
 }
 
 .dropdown-menu a {
@@ -135,7 +138,79 @@ body {
     transition: all 0.5s ease;
 }
 .account:hover {
-   background: #bfa45b;              
-  color: #000;               
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    background: #000000;              
+    color: #ffffff;               
+}
+
+
+/* first section----------------------------------- */
+
+.first-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 80px 120px;
+  /*background: linear-gradient(to bottom, #a000ff, #350099, #090014); */
+}
+
+.unauna {
+    flex: 1;
+    max-width: 550px;
+}
+
+.unauna h1 {
+    position: relative;
+    left: 25%;
+    font-size: 10rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.unauna p {
+    position: relative;
+    left: 25%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.unauna a {
+    color: #ff9900;
+    font-weight: 700;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.unauna a:hover {
+    color: #ffcc66;
+}
+
+.arrow {
+    position: relative;
+    left: 25%;
+    font-size: 2rem;
+    margin-top: 50px;
+    color: #fff;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+.unangImahe {
+    flex: 1;
+    text-align: right;
+}
+
+.unangImahe img {
+    width: 70%;
+    max-width: 700px;
+    height: 70%;
+    position: relative;
+    right: -12%;
 }
