@@ -12,7 +12,7 @@
 }
 
 body {
-  background: linear-gradient(to top, #000000 30%, #bfa45b 90%, #090014);
+  background: linear-gradient(to bottom,#bfa45b, #5e512c,#000000);
   color: white;
   min-height: 100vh;
   overflow-x: hidden;
@@ -138,13 +138,12 @@ body {
     transition: all 0.5s ease;
 }
 .account:hover {
-    background: #000000;              
+    background: #bfa45b;              
     color: #ffffff;               
 }
 
 
 /* first section----------------------------------- */
-
 .first-section {
     display: flex;
     align-items: center;
@@ -157,15 +156,17 @@ body {
 .unauna {
     flex: 1;
     max-width: 550px;
+    transform: translateY(-100px);
 }
 
 .unauna h1 {
     position: relative;
-    left: 25%;
-    font-size: 10rem;
-    font-weight: 800;
-    line-height: 1.1;
+    left: 18%;
+    font-size: 8rem;
+    font-weight: 650;
+    line-height: 1;
     margin-bottom: 1rem;
+    white-space: nowrap;
 }
 
 .unauna p {
@@ -205,6 +206,8 @@ body {
 .unangImahe {
     flex: 1;
     text-align: right;
+    transform: translateY(-150px);
+   
 }
 
 .unangImahe img {
@@ -214,3 +217,4 @@ body {
     position: relative;
     right: -12%;
 }
+
