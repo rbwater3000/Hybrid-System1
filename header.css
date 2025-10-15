@@ -204,17 +204,17 @@ body {
 }
 
 .unangImahe {
-    flex: 1;
-    text-align: right;
-    transform: translateY(-150px);
+    box-sizing: border-box;
+    color: inherit;
    
 }
 
-.unangImahe img {
-    width: 70%;
+.unangImahe img {   
     max-width: 700px;
-    height: 70%;
+    border: 0;
     position: relative;
-    right: -12%;
+    left: 122px;
+    bottom: 81px;
+    border-radius: 10px;
 }
 
