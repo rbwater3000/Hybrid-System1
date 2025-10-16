@@ -18,6 +18,9 @@ body {
   overflow-x: hidden;
 }
 
+/* Laging lagyan ng Comment para di nakakalito */ 
+
+/* Header Base */
 .mxlblogo {
     display: flex;
     align-items: center;
@@ -28,7 +31,7 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    
+    z-index: 200;
 }
 
 .logo {
@@ -49,6 +52,11 @@ body {
     right: -3%; 
 }
 
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
 .mlb {
     font-size: 22px;
     list-style: none;
@@ -62,14 +70,14 @@ body {
 }
 
 .mlb a{
-    color: rgb(255, 255, 255);
+    color: #fff;
     text-decoration: none;
     font-weight: 800;
     transition: color 0.3s;
 }
 
 .mlb a:hover{
-    color: #bfa45b;
+     color: #bfa45b;
 }
 
 /* Dropdown */
@@ -78,19 +86,20 @@ body {
 }
 
 .dropdown-menu { 
-    width: auto;
-    height: auto;
     display: none;
     position: absolute;
-    background: #2b2b2b;
+    background: #1e1e1e;
     top: 100%;
     left: 0;
-    min-width: 180px;
-    border-radius: 8px;
-    padding: 10px 0;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
-    margin: 0 auto;
-    transition: all 0.3s ease;
+    min-width: 300px;
+    border-radius: 10px;
+    padding: 12px 0;
+    box-shadow: 0 100px 200px #bfa45b;
+    z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
 }
 
 .dropdown-menu li {
@@ -100,7 +109,6 @@ body {
 .dropdown-menu li a {
     color: white;
     white-space: nowrap;
-    text-decoration: none;
     padding: 10px 20px;
     display: block;
     transition: background 0.3s;
@@ -123,11 +131,12 @@ body {
     display: block;
 }
 
+/* Account Menu */
 .account {
     font-size: 18 px;
     color: #bfa45b;
     background: transparent;
-    border: 1.5px solid #bfa45b; 
+    border: 1.5px solid #bfa45b;
     padding: 12px 25px;
     border-radius: 5px;
     font-weight: bold;
@@ -140,6 +149,83 @@ body {
 .account:hover {
     background: #bfa45b;              
     color: #ffffff;               
+}
+
+/* 🍔 HAMBURGER ICON */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Sidebar hidden by default */
+.sidebar {
+  display: none; /* Hidden on desktop */
+}
+
+/* ==========================
+   RESPONSIVE (MOBILE ONLY)
+========================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  .mlb {
+    display: none;
+  }
+  .account {
+    display: none;
+  }
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Show Sidebar only in mobile */
+  .sidebar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 75%;
+    height: 100%;
+    background: #111;
+    padding: 30px 20px;
+    transition: 0.4s ease;
+    z-index: 300;
+  }
+  .sidebar.active {
+    left: 0;
+  }
+  .sidebar .close-btn {
+    font-size: 26px;
+    color: var(--accent);
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+  .sidebar ul {
+    list-style: none;
+  }
+  .sidebar ul li {
+    margin: 20px 0;
+  }
+  .sidebar ul li a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+  }
 }
 
 
@@ -161,7 +247,7 @@ body {
 
 .unauna h1 {
     position: relative;
-    left: 18%;
+    left: 10%;
     font-size: 8rem;
     font-weight: 650;
     line-height: 1;
@@ -171,7 +257,7 @@ body {
 
 .unauna p {
     position: relative;
-    left: 25%;
+    left: 15%;
     font-size: 1.3rem;
     font-weight: 600;
     color: #f0f0f0;
@@ -191,7 +277,7 @@ body {
 
 .arrow {
     position: relative;
-    left: 25%;
+    left: 15%;
     font-size: 2rem;
     margin-top: 50px;
     color: #fff;
@@ -214,7 +300,53 @@ body {
     border: 0;
     position: relative;
     left: 122px;
-    bottom: 81px;
-    border-radius: 10px;
+    bottom: 82px;
+    border-radius: 5px;
+    
+}
+/* First section END */
+
+/* ==========================
+   RESPONSIVE (MOBILE ONLY)
+========================== */
+
+/* 🌐 Responsive for tablets & phones # FOR FIRST SECTION */
+@media (max-width: 1024px) {
+  .first-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 5%;
+  }
+
+  .unauna h1 {
+    font-size: 3rem;
+  }
+
+  .unauna p {
+    font-size: 1.1rem;
+  }
+
+  .unangImahe img {
+    max-width: 400px;
+    margin-top: 30px;
+  }
 }
 
+@media (max-width: 600px) {
+  .unauna h1 {
+    font-size: 2.3rem;
+  }
+
+  .unauna p {
+    font-size: 1rem;
+  }
+
+  .unangImahe img {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+  }
+}
