@@ -53,11 +53,12 @@ body {
 }
 
 .logo img {
+    position: relative;
     height: 80px;
     width: auto;
 }
 
-.mlb {
+.mxlab {
     font-size: 22px;
     list-style: none;
     display: flex;
@@ -66,10 +67,11 @@ body {
     padding: 0px 15px;
     margin: 0 auto;
     position: relative;
-    left: -10%;
+    left: -5%;
 }
 
 .mlb a{
+    position: relative;
     color: #fff;
     text-decoration: none;
     font-weight: 800;
@@ -141,7 +143,7 @@ body {
     border-radius: 5px;
     font-weight: bold;
     letter-spacing: 2px;
-    position: absolute;
+    position: relative;
     right: 12%;
     cursor: pointer;
     transition: all 0.5s ease;
@@ -172,62 +174,6 @@ body {
 .sidebar {
   display: none; /* Hidden on desktop */
 }
-
-/* ==========================
-   RESPONSIVE (MOBILE ONLY)
-========================== */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-  .mlb {
-    display: none;
-  }
-  .account {
-    display: none;
-  }
-  .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  /* Show Sidebar only in mobile */
-  .sidebar {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 75%;
-    height: 100%;
-    background: #111;
-    padding: 30px 20px;
-    transition: 0.4s ease;
-    z-index: 300;
-  }
-  .sidebar.active {
-    left: 0;
-  }
-  .sidebar .close-btn {
-    font-size: 26px;
-    color: var(--accent);
-    cursor: pointer;
-    margin-bottom: 30px;
-  }
-  .sidebar ul {
-    list-style: none;
-  }
-  .sidebar ul li {
-    margin: 20px 0;
-  }
-  .sidebar ul li a {
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-  }
-}
-
 
 /* first section----------------------------------- */
 .first-section {
@@ -310,7 +256,58 @@ body {
    RESPONSIVE (MOBILE ONLY)
 ========================== */
 
-/* 🌐 Responsive for tablets & phones # FOR FIRST SECTION */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  .mlb {
+    display: none;
+  }
+  .account {
+    display: none;
+  }
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Show Sidebar only in mobile */
+  .sidebar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 75%;
+    height: 100%;
+    background: #111;
+    padding: 30px 20px;
+    transition: 0.4s ease;
+    z-index: 300;
+  }
+  .sidebar.active {
+    left: 0;
+  }
+  .sidebar .close-btn {
+    font-size: 26px;
+    color: var(--accent);
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+  .sidebar ul {
+    list-style: none;
+  }
+  .sidebar ul li {
+    margin: 20px 0;
+  }
+  .sidebar ul li a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
 @media (max-width: 1024px) {
   .first-section {
     flex-direction: column;
@@ -348,5 +345,194 @@ body {
 
   .arrow {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .first-section {
+    padding: 60px 80px;
+  }
+
+  .unauna h1 {
+    font-size: 5rem;
+  }
+
+  .unauna p {
+    font-size: 1.2rem;
+  }
+
+  .unangImahe img {
+    max-width: 550px;
+  }
+
+  .mlb {
+    gap: 15px;
+    font-size: 18px;
+  }
+}
+
+
+/* Tablets (portrait + landscape) */
+@media (max-width: 992px) {
+  header .mxlblogo {
+    padding: 24px;
+  }
+
+  .unauna h1 {
+    font-size: 3.8rem;
+  }
+
+  .unauna p {
+    font-size: 1.1rem;
+  }
+
+  .unangImahe img {
+    max-width: 450px;
+    left: 0;
+    bottom: 0;
+  }
+
+  .mlb {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .account {
+    display: none;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .first-section {
+    flex-direction: column;
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  .unauna {
+    transform: translateY(0);
+    max-width: 100%;
+  }
+
+  .unauna h1 {
+    font-size: 2.8rem;
+    left: 0;
+  }
+
+  .unauna p {
+    font-size: 1rem;
+    left: 0;
+  }
+
+  .arrow {
+    left: 0;
+    font-size: 1.6rem;
+  }
+
+  .unangImahe img {
+    width: 90%;
+    max-width: 320px;
+    margin-top: 20px;
+    left: 0;
+    bottom: 0;
+  }
+
+  /* Sidebar menu settings */
+  .sidebar {
+    width: 80%;
+    padding: 20px;
+  }
+}
+
+/* Extra small phones (portrait mode, ~iPhone SE) */
+@media (max-width: 480px) {
+  .unauna h1 {
+    font-size: 2rem;
+  }
+
+  .unauna p {
+    font-size: 0.9rem;
+  }
+
+  .unangImahe img {
+    max-width: 280px;
+  }
+
+  .arrow {
+    font-size: 1.2rem;
+  }
+
+  nav.sidebar ul li a {
+    font-size: 16px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .first-section {
+    flex-direction: column;
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  .unauna {
+    transform: translateY(0);
+    max-width: 100%;
+  }
+
+  .unauna h1 {
+    font-size: 2.8rem;
+    left: 0;
+  }
+
+  .unauna p {
+    font-size: 1rem;
+    left: 0;
+  }
+
+  .arrow {
+    left: 0;
+    font-size: 1.6rem;
+  }
+
+  .unangImahe img {
+    width: 90%;
+    max-width: 320px;
+    margin-top: 20px;
+    left: 0;
+    bottom: 0;
+  }
+
+  /* Sidebar menu settings */
+  .sidebar {
+    width: 80%;
+    padding: 20px;
+  }
+}
+
+/* Extra small phones (portrait mode, ~iPhone SE) */
+@media (max-width: 480px) {
+  .unauna h1 {
+    font-size: 2rem;
+  }
+
+  .unauna p {
+    font-size: 0.9rem;
+  }
+
+  .unangImahe img {
+    max-width: 280px;
+  }
+
+  .arrow {
+    font-size: 1.2rem;
+  }
+
+  nav.sidebar ul li a {
+    font-size: 16px;
   }
 }
