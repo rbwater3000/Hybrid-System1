@@ -118,37 +118,74 @@ body {
       color: #ffffff;
    }
    
-    /* Right-side controls */
-    .controls{display:flex; align-items:center; gap:12px}
-    .btn{background:#ffd54a;color:#071129;padding:8px 12px;border:none;border-radius:9px;font-weight:700;cursor:pointer}
-    .icon-btn{background:transparent;border:none;color:inherit;cursor:pointer;font-size:18px;padding:8px;border-radius:8px}
 
-    /* Mobile menu (hidden on desktop) */
-    .hamburger{display:none}
-    .mobile-nav{
-      display:none; /* toggled with JS */
-      padding:12px 20px;
-      background:linear-gradient(180deg, rgba(11,17,32,0.98), rgba(9,13,24,0.95));
-    }
-    .mobile-nav a{display:block;padding:10px 8px;border-radius:8px;text-decoration:none;color:inherit}
-    .mobile-nav a:hover{background:rgba(255,255,255,0.03)}
 
-    /* Small tweaks */
-    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+/* MOBILE SIDEBAR MENU  */
+/* -------------------- */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #bfa45b;
+  cursor: pointer;
+}
 
-    /* RESPONSIVE RULES */
-    @media (max-width: 920px){
-      nav.primary{display:none}
-      .hamburger{display:block}
-      .controls .btn{display:none}
-      .brand h1{display:none}
-      .container{padding:10px 14px}
-    }
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  height: 100%;
+  background: #0b0b0b;
+  box-shadow: -4px 0 15px rgba(0,0,0,0.5);
+  transition: right 0.4s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+}
 
-    @media (max-width:480px){
-      .logo{width:40px;height:40px;font-size:16px}
-      .brand p{display:none}
-    }
+.sidebar.active {
+  right: 0;
+}
 
-    /* optional utility */
-    .nav-center{justify-content:center}
+.close-btn {
+  align-self: flex-end;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #bfa45b;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.mobile-nav a:hover {
+  color: #bfa45b;
+}
+
+/* Show hamburger and hide desktop nav on small screens */
+@media (max-width: 920px) {
+  nav.primary { display: none; }
+  .account { display: none; }
+  .hamburger { display: block; }
+}
+
+/* Responsive tweaks for smaller phones */
+@media (max-width: 480px) {
+  .mobile-nav a { font-size: 18px; }
+  .logo img { height: 45px; }
+}
