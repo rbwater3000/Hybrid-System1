@@ -1,0 +1,55 @@
+/* Bottom Section */
+.container3 {
+  width: 100%;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+              url("Studio/micropone.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.bottom-section .content {
+  max-width: 800px;
+  color: #fff;
+}
+
+.bottom-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #bfa45b;
+  margin-bottom: 20px;
+}
+
+.bottom-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.learn-more {
+  background: #bfa45b;
+  color: #000;
+  border: none;
+  padding: 12px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.learn-more:hover {
+  background: #e0c76a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bottom-section h2 {
+    font-size: 2rem;
+  }
+  .bottom-section p {
+    font-size: 1rem;
+  }
+}

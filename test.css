@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Hamburger button */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  background: #ff6600;
+  border-radius: 2px;
+}
+
+/* Sidebar styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100vh;
+  background: #111;
+  color: #fefefe;
+  padding: 30px 25px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.close-btn {
+  font-size: 2rem;
+  color: #ff6600;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.sidebar h2 {
+  margin-top: 70px;
+  color: #ff6600;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.menu-section {
+  margin-top: 25px;
+}
+
+.menu-title {
+  color: #ff6600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.submenu {
+  list-style: none;
+  margin-left: 10px;
+}
+
+.submenu li {
+  margin-bottom: 8px;
+}
+
+.submenu li a {
+  text-decoration: none;
+  color: #f0a060;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.submenu li a:hover {
+  color: #ff6600;
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: #ff6600;
+  margin-top: 18px;
+  font-weight: 500;
+}
+
+.toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
