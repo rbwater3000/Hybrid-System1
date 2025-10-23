@@ -20,7 +20,7 @@
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.1;
-  color: #ffd900;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
@@ -31,9 +31,10 @@
 }
 
 .unauna a {
-  color: #ffd900;
+  color: #bfa45b;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 1000;
+  line-height: 1.1;
   transition: color 0.3s ease;
 }
 
@@ -43,8 +44,8 @@
 
 /* Arrow animation */
 .arrow {
-  font-size: 2rem;
-  color: #ffd900;
+  font-size: 3rem;
+  color: #ffffff;
   animation: bounce 1.5s infinite;
 }
 

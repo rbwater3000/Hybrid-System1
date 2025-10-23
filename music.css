@@ -135,8 +135,8 @@ body {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 75%;
-  height: 100%;
+  width: 50%;
+  height: 100vh;
   background: #0b0b0b;
   box-shadow: -4px 0 15px rgba(0,0,0,0.5);
   transition: right 0.4s ease;
@@ -163,7 +163,7 @@ body {
 .mobile-nav {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 .mobile-nav a {
@@ -188,4 +188,60 @@ body {
 @media (max-width: 480px) {
   .mobile-nav a { font-size: 18px; }
   .logo img { height: 45px; }
+}
+
+/* submenu */
+.sidebar h2 {
+  color: #bfa45b;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.menu-section {
+  margin-top: 8px;
+}
+
+.menu-title {
+  color: #bfa45b;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: -8px;
+}
+
+.submenu {
+  list-style: none;
+  margin-left: 10px;
+}
+
+.submenu li {
+  margin-bottom: 8px;
+}
+
+.submenu li a {
+  text-decoration: none;
+  color: #fefefe;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.submenu li a:hover {
+  color: #bfa45b;
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: #bfa45b;
+  margin-top: 18px;
+  font-weight: 500;
+}
+
+.toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
 }
