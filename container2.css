@@ -1,12 +1,14 @@
-/* Container 2 */
+/* MUSIC 2 */
 .container2 {
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #ff5e5e;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url("Studio/studiomic.jpg") center/cover no-repeat;
+               url("Studio/studiomic.jpg") center/cover no-repeat;
+  transition: opacity 0.3s;
 }
 
 

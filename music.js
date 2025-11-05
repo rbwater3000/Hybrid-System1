@@ -23,3 +23,10 @@ toggleProducts.addEventListener("click", () => {
     toggleProducts.textContent = "+";
   }
 });
+
+//Vasnish
+window.addEventListener("scroll", () => {
+  const fadeElement = document.querySelector(".container2");
+  const opacity = 1 - window.scrollY / 700;
+  fadeElement.style.opacity = Math.max(opacity, 0);
+});

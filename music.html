@@ -97,141 +97,29 @@
   </div>
 
   <script src="music.js"></script>
+
+   <section class="app-section">
+    <div class="app-container">
+      <div class="app-image">
+        <img src="studio/studio1.2.jpg" alt="Keyboard and tablet app">
+      </div>
+
+      <div class="app-content">
+        <h1>Mixlab Music Studio<br>for android browsers</h1>
+        <p class="app-desc">
+          Kami ang bahala sa pro level production para maging streaming ready, radio worthy, at pangmalakasan ang kanta mo!
+          And just to be clear this is NOT an 𝗔𝗜 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 arrangement ❌
+        </p>
+        <p>
+          Your song will be produced by real musicians, producers and arrangers who know how to create the perfect sound for your song.
+          Kaya ano pang hinihintay mo? Magpa-produce ka na!
+        </p>
+        <button class="app-btn">DISCOVER THE MixLab</button>
+      </div>
+    </div>
+  </section>
+
 </body>
-
-<body>
-  <main class="hero">
-      <section class="card intro fade-in">
-        <h2>We turn ideas into polished recordings</h2>
-        <p>Full-service music studio offering recording, mixing, mastering, production help, and rehearsal spaces equipped for bands and solo artists.</p>
-
-        <div class="features">
-          <div class="feature">
-            <h4>Live room</h4>
-            <p>Spacious acoustic-treated live room with drum riser.</p>
-          </div>
-          <div class="feature">
-            <h4>Control Room</h4>
-            <p>Industry monitors, preamps, and 24-track I/O.</p>
-          </div>
-          <div class="feature">
-            <h4>Producer-ready</h4>
-            <p>On-site producer and session players available.</p>
-          </div>
-        </div>
-
-        <div class="cta-row">
-          <button class="btn" id="bookNow">Book a session</button>
-          <button class="btn ghost" id="listenSamples">Listen Samples</button>
-        </div>
-
-        <div class="services-grid" id="services">
-          <div class="service-card">
-            <h3>Recording</h3>
-            <p>Multi-track recording for bands, vocalists, and podcasts — fast turnaround and raw tape emulation available.</p>
-          </div>
-          <div class="service-card">
-            <h3>Mixing</h3>
-            <p>Professional mixing with reference checks on multiple systems and stems delivery.</p>
-          </div>
-          <div class="service-card">
-            <h3>Mastering</h3>
-            <p>Mastering services to make your tracks ready for streaming and physical release.</p>
-          </div>
-        </div>
-
-        <div style="margin-top:18px;">
-          <h4>Why artists trust us</h4>
-          <p class="tag">Flexible rates, friendly team, and an environment built for creativity.</p>
-        </div>
-      </section>
-
-      <aside class="studio-card card fade-in">
-        <div class="studio-image" aria-hidden="true"></div>
-        <div>
-          <div style="display:flex; justify-content:space-between; align-items:center;">
-            <strong>Control Room — Studio A</strong>
-            <div class="tag">Seats: 5</div>
-          </div>
-          <div class="specs" style="margin-top:10px">
-            <div class="spec">Neve-style preamp</div>
-            <div class="spec">24-channel interface</div>
-            <div class="spec">U87-style condenser</div>
-          </div>
-        </div>
-
-        <div style="margin-top:8px">
-          <div class="audio-player">
-            <div class="play-btn" id="playBtn" title="Play sample">▶</div>
-            <div>
-              <div style="font-weight:600">Studio Sample</div>
-              <div class="meter" id="meter"></div>
-            </div>
-          </div>
-        </div>
-
-        <div id="booking" style="margin-top:8px">
-          <h4 style="margin:0 0 6px 0">Quick Booking</h4>
-          <form id="bookingForm" class="booking" onsubmit="return false;">
-            <label for="name">Name</label>
-            <input id="name" placeholder="Your name" required />
-            <label for="date">Date</label>
-            <input id="date" type="date" required />
-            <label for="hours">Hours</label>
-            <select id="hours">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
-            <button class="btn" id="submitBooking">Request Booking</button>
-          </form>
-          <div id="bookingMsg" style="margin-top:8px;color:var(--muted);font-size:13px"></div>
-        </div>
-      </aside>
-    </main>
-
-    <section class="card" style="margin-top:18px">
-      <h3 id="gallery">Gallery</h3>
-      <div class="gallery" aria-live="polite">
-        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Studio 1"/>
-        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Studio 2"/>
-        <img src="https://images.unsplash.com/photo-1506152983158-bb5f6a8f6f1b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Gear"/>
-        <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Live Room"/>
-      </div>
-    </section>
-
-    <section id="contact" class="card" style="margin-top:18px;display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start">
-      <div style="flex:1; min-width:260px">
-        <h3>Contact & Location</h3>
-        <p class="tag">123 Harmony Ave, Music City — Mon–Sat 9:00–21:00</p>
-        <p style="margin-top:8px">Phone: <a href="tel:+1234567890">+1 (234) 567-890</a> • Email: <a href="mailto:hello@harmonichouse.studio">hello@harmonichouse.studio</a></p>
-      </div>
-
-      <div style="min-width:320px; max-width:420px; flex:1">
-        <h3>Message us</h3>
-        <form id="contactForm" style="display:flex;flex-direction:column;gap:8px;" onsubmit="return false;">
-          <input id="cname" placeholder="Your name" required />
-          <input id="cemail" placeholder="Email" type="email" required />
-          <textarea id="cmsg" rows="3" placeholder="Tell us about your project..." required></textarea>
-          <button class="btn" id="sendMsg">Send</button>
-          <div id="contactMsg" style="color:var(--muted);font-size:13px"></div>
-        </form>
-      </div>
-    </section>
-
-    <footer>
-      <div>© <span id="year"></span> Harmonic House</div>
-      <div>Designed with ❤️ — Pro gear, friendly crew</div>
-    </footer>
-  </div>
-
-  <div class="lightbox" id="lightbox" role="dialog" aria-hidden="true">
-    <button class="close-light" id="closeLight">✕</button>
-    <img id="lightImg" src="" alt="Expanded"/>
-  </div>
-
-  <audio id="sampleAudio" src="https://cdn.simple-mock-audio.example/sample.mp3"></audio>
 </body>
 </html>
 
