@@ -1,0 +1,5 @@
+GitHub Commands 
+git add -u	Adds updated and deleted files (but not new ones)
+git add .	Adds everything (new + modified + deleted)
+git commit -m "..."	Saves your staged changes
+git push origin main	Sends your commits to the remote branch main
