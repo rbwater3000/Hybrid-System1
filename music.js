@@ -24,7 +24,7 @@ toggleProducts.addEventListener("click", () => {
   }
 });
 
-//Vasnish
+//Vasnish Container2
 window.addEventListener("scroll", () => {
   const fadeElement = document.querySelector(".container2");
   const opacity = 1 - window.scrollY / 700;
