@@ -1,3 +1,5 @@
+//PARA SA LARO NA JS
+
 let timer;
 let timeLeft = 60;
 let score = 0;
