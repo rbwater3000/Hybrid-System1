@@ -1,54 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Music Tutor</title>
-<link rel="stylesheet" href="gametest.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Tutor Web</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #1e1e2f, #292942);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .note-box {
+      font-size: 5rem;
+      background: #ffd900;
+      color: #1e1e2f;
+      padding: 30px 60px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    button {
+      background: #fff;
+      color: #1e1e2f;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: all 0.2s;
+    }
+    button:hover {
+      background: #ffd900;
+    }
+    .result {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      height: 1.5em;
+    }
+    .score {
+      font-size: 1rem;
+      margin-top: 10px;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
 
-<header>Music Tutor</header>
+  <h1>🎵 Music Tutor Web</h1>
+  <div class="note-box" id="noteBox">?</div>
+  <div class="buttons" id="buttons"></div>
+  <div class="result" id="result"></div>
+  <div class="score" id="score">Score: 0</div>
+  <button onclick="restartGame()">Restart</button>
 
+  <script>
+    const notes = ["A", "B", "C", "D", "E", "F", "G"];
+    const noteBox = document.getElementById("noteBox");
+    const buttonsDiv = document.getElementById("buttons");
+    const resultDiv = document.getElementById("result");
+    const scoreDiv = document.getElementById("score");
 
-<div id="mainMenu" class="screen active">
-  <button class="btn-large">Notes Reference</button>
-  <button class="btn-start" onclick="startGame()">START</button>
-  <div>
-    <button class="btn-circle">Statistics</button>
-    <button class="btn-circle">Options</button>
-  </div>
-</div>
+    let currentNote = "";
+    let score = 0;
 
+    function newNote() {
+      currentNote = notes[Math.floor(Math.random() * notes.length)];
+      noteBox.textContent = currentNote;
+    }
 
-<div id="gameScreen" class="screen">
-  <header>Identify Notes</header>
-  <div class="game-top">
-    <div>Time<br><span id="time">01:00</span></div>
-    <div>Score<br><span id="score">0</span></div>
-    <div>Accuracy<br><span id="accuracy">-</span></div>
-  </div>
-  <div class="note-display" id="noteDisplay">𝄢</div>
-  <div class="note-buttons" id="noteButtons">
-    <button>C</button><button>D</button><button>E</button><button>F</button><button>G</button><button>A</button><button>B</button>
-    <button>C#</button><button>E♭</button><button>F#</button><button>A♭</button><button>B♭</button>
-  </div>
-</div>
+    function checkAnswer(note) {
+      if (note === currentNote) {
+        resultDiv.textContent = "✅ Correct!";
+        score++;
+      } else {
+        resultDiv.textContent = "❌ Try again!";
+        score = Math.max(0, score - 1);
+      }
+      scoreDiv.textContent = "Score: " + score;
+      newNote();
+    }
 
+    function restartGame() {
+      score = 0;
+      scoreDiv.textContent = "Score: 0";
+      resultDiv.textContent = "";
+      newNote();
+    }
 
-<div id="summaryScreen" class="screen summary">
-  <header>Summary</header>
-  <h2>Score <span id="sumScore">0</span></h2>
-  <p>Accuracy <span id="sumAccuracy">0%</span></p>
-  <p>Points <span id="sumPoints">0</span></p>
-  <p>Your total points considered for stats is your score multiplied by your accuracy.</p>
-  <div class="chart"><div class="chart-line"></div></div>
-  <button class="share-btn">Share Music Tutor</button><br>
-  <button class="btn-circle" onclick="startGame()">Play Again</button>
-  <button class="btn-circle" onclick="showMainMenu()">Review Mistakes</button>
-</div>
+    // Create buttons
+    notes.forEach(note => {
+      const btn = document.createElement("button");
+      btn.textContent = note;
+      btn.onclick = () => checkAnswer(note);
+      buttonsDiv.appendChild(btn);
+    });
 
-<script src="gamestest.js"></script>
+    newNote();
+  </script>
 
 </body>
 </html>
